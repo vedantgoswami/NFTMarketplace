@@ -9,7 +9,7 @@ import { Discover,HelpCenter,Profile,Notification,SideBar } from './index';
 import { Button } from "../componentindex";
 import images from "../../img";
 
-
+import logo2 from "../../img/logo2.png";
 const NavBar = () => {
   const [discover,setDiscover]=useState(false);
   const [help,setHelp]=useState(false);
@@ -89,7 +89,7 @@ const NavBar = () => {
             <div className={Style.navbar_container_left_box_input}>
               <div className={Style.navbar_container_left_box_input_box}>
                 <input type='text' placeholder='Search NFT'/>
-                <BsSearch onClick={()=>{}} className={Style.search_con}/>
+                <BsSearch onClick={()=>{}} className={Style.search_icon}/>
               </div>
             </div>
           </div>
@@ -121,7 +121,7 @@ const NavBar = () => {
             </div>
             {/* Create Button Section */}
             <div className={Style.navbar_container_right_button}>
-              <Button btnText="Create"/>
+              <Button btnName="Create" handleClick={()=>{}}/>
             </div>
             {/* User Profile */}
             <div className={Style.navbar_container_right_profile_box}>
@@ -145,13 +145,14 @@ const NavBar = () => {
           </div>
         </div>
         {/* SIDEBAR COMPONENT */}
-        {
-          openSideMenu && (
-            <div className={Style.SideBar}>
-              <SideBar setOpenSideMenu={setOpenSideMenu}/>
-            </div>
-          )
-        }
+        {openSideMenu && (
+        <div className={Style.sideBar}>
+          <SideBar
+            setOpenSideMenu={setOpenSideMenu}
+            
+          />
+        </div>
+      )}
     </div>
   )
 }

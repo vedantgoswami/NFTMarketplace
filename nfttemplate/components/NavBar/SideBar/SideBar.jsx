@@ -92,17 +92,17 @@ const SideBar = ({setOpenSideMenu}) => {
 
   return (
      
-    <div className={Style.sidebar}>
-      <GrClose className={Style.sidebar_closeBtn} 
+    <div className={Style.sideBar}>
+      <GrClose className={Style.sideBar_closeBtn} 
         onClick={()=>closeSideBar()}/>
-      <div className={Style.sidebar_box}>
+      <div className={Style.sideBar_box}>
         <Image src={images.logo} alt="logo"
         width={150} height={150}/>
         <p>
           Discover the most outstanding articles on all topices of NFT
             & your own stories and share them.
         </p>
-        <div className={Style.sidebar_social}>
+        <div className={Style.sideBar_social}>
           <a href="#">
             <TiSocialFacebook/>
           </a>
@@ -122,7 +122,7 @@ const SideBar = ({setOpenSideMenu}) => {
       </div>
       <div className={Style.sideBar_menu}>
         <div>
-          <div className={Style.sidebar_menu_box} 
+          <div className={Style.sideBar_menu_box} 
           onClick={()=> openDiscoverMenu()}>
             <p>Discover</p>
             <TiArrowSortedDown/>
@@ -140,7 +140,7 @@ const SideBar = ({setOpenSideMenu}) => {
         </div>
         <div>
         <div 
-            className={Style.sidebar_menu_box} 
+            className={Style.sideBar_menu_box} 
             onClick={()=> openHelpMenu()}>
             <p>Help Center</p>
             <TiArrowSortedDown/>
@@ -161,8 +161,8 @@ const SideBar = ({setOpenSideMenu}) => {
       </div>
 
       <div className={Style.sideBar_button}>
-        <Button btnName="create"/>
-        <Button btnName="Connect Wallet"/>
+        <Button btnName="Create" handleClick={()=>{}}/>
+        <Button btnName="Connect Wallet" handleClick={()=>{}}/>
       </div>
     </div>
   )
