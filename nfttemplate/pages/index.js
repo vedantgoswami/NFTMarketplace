@@ -8,13 +8,31 @@ import {
   Subscribe,
 Category,
 Filter,
-NFTCard} from '../components/componentindex';
+NFTCard,
+Collection,FollowerTab,
+Audio,Slider} from '../components/componentindex';
 const Home = () => {
   return (
     <div className={Style.homePage}>
       <HeroSection/>
       <Service/>
       <BigNFTSlider/>
+      <Title 
+        heading="Latest Audio Collection"
+        paragraph="Discover the most outstanding NFTs in all topics of life."
+        />
+      <Audio/>
+      <Title 
+        heading="New Collection"
+        paragraph="Discover the most outstanding NFTs in all topics of life."
+        />
+        <FollowerTab/>
+        <Title 
+        heading="Explore NFTs Video"
+        paragraph="Click on play icon and enjoy NFTs video."
+        />
+        <Slider />
+      <Collection/>
       <Title 
         heading="Featured NFTs"
         paragraph="Discover the most outstanding NFTs in all topics of life."
