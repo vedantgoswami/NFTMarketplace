@@ -14,4 +14,6 @@ import FollowerTab from "./Followertab/FollowerTab";
 import Audio from "./Audio/Audio";
 import LikeProfile from "./LikeProfile/LikeProfile";
 import Slider from "./Slider/Slider";
-export {Slider,LikeProfile,Audio,FollowerTab,Collection,NFTCard,Filter,Category,Title,Subscribe,BigNFTSlider,Button,Footer,NavBar,HeroSection,Service};
+import Brand from "./Brand/Brand";
+import Video from "./Video/Video";
+export {Video,Brand,Slider,LikeProfile,Audio,FollowerTab,Collection,NFTCard,Filter,Category,Title,Subscribe,BigNFTSlider,Button,Footer,NavBar,HeroSection,Service};

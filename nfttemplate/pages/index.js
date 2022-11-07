@@ -1,5 +1,7 @@
 import React from 'react'
 import Style from '../styles/index.module.css';
+// import earn from "./earn.png";
+
 import { 
   Title,
   HeroSection,
@@ -10,7 +12,9 @@ Category,
 Filter,
 NFTCard,
 Collection,FollowerTab,
-Audio,Slider} from '../components/componentindex';
+Audio,Slider,
+Brand,
+Video} from '../components/componentindex';
 const Home = () => {
   return (
     <div className={Style.homePage}>
@@ -27,17 +31,18 @@ const Home = () => {
         paragraph="Discover the most outstanding NFTs in all topics of life."
         />
         <FollowerTab/>
-        <Title 
+        {/* <Title 
         heading="Explore NFTs Video"
         paragraph="Click on play icon and enjoy NFTs video."
-        />
+        /> */}
         <Slider />
-      <Collection/>
-      <Title 
+        <Title 
         heading="Featured NFTs"
         paragraph="Discover the most outstanding NFTs in all topics of life."
         />
       <Filter/>
+      <Collection/>
+      
       <NFTCard/>
       <Title 
         heading="Browse by category"
@@ -45,6 +50,8 @@ const Home = () => {
         />
       <Category/>
       <Subscribe/>  
+      <Brand/>
+      <Video/>
     </div>
   )
 }
