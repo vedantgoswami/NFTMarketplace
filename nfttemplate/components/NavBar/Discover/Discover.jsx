@@ -10,11 +10,11 @@ const Discover = () => {
     },
     {
       name: "Search",
-      link: "search"
+      link: "searchPage"
     },
     {
       name: "Author Profile",
-      link: "author-profile"
+      link: "author"
     },
     {
       name: "NFT Details",
