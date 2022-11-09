@@ -18,7 +18,7 @@ const searchPage = () => {
   ]
   return (
     <div className={Style.searchPage}>
-        <Banner bannerImage={images.creatorbackground2}/>
+        <Banner bannerImage={images.creatorbackground3}/>
         <Filter/>
         <NFTCardTwo NFTData={collectionArray}/>
         <SearchBar/>

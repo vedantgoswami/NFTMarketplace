@@ -9,7 +9,29 @@ const NFTDetailsImg = () => {
   const [description, setdescription] = useState(true);
   const [details, setdetails] = useState(true);
   const [like, setlike] = useState(false);
-
+  const openDescription=()=>{
+    if(!description){
+      setdescription(true);
+    }
+    else
+    setdescription(false);
+  }
+  const openDetails=()=>{
+    if(!details){
+      setdetails(true);
+    }
+    else{
+      setdetails(false);
+    }
+  };
+  const likeNFT = ( )=>{
+    if(!like){
+      setlike(true);
+    }
+    else{
+      setlike(false);
+    }
+  }
   return (
     <div className={Style.NFTDetailsImg}>
        <div className={Style.NFTDetailsImg_box}>
@@ -46,9 +68,37 @@ const NFTDetailsImg = () => {
           </div>
           {
             description && (
-              <div className={Style.NFTDetailsImg_box_description}></div>
+              <div className={Style.NFTDetailsImg_box_description}>
+                <p>
+                  Tattooed Kitty Gang("TKG") 
+                </p>
+              </div>
             )
           }
+          <div className={Style.NFTDetailsImg_box_details} 
+            onClick={()=>openDetails()}
+          >
+            <p>Details</p>
+            {details?<TiArrowSortedUp/>:<TiArrowSortedDown/>}
+          </div>
+          {
+            details && (
+            <div className={Style.NFTDetailsImg_box_details_box}>
+            <small>2000 x 2000px. Image(685KB)</small>
+            <p>
+              <small>Contract Address</small>
+              <br />
+              0x0f3bBcBf35894Cd3cf235e95c5fE1e776087cA63
+           </p>
+           <p>
+            <small>Token ID</small>
+            1003300256
+
+           </p>
+          </div>
+            )
+          }
+          
        </div>
     </div>
   )
